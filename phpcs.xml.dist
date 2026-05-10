@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="php-n8n-client">
+    <description>PSR-12 coding standard for php-n8n/client.</description>
+
+    <arg name="extensions" value="php"/>
+
+    <file>src</file>
+    <file>tests</file>
+
+    <rule ref="PSR12">
+        <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
+    </rule>
+</ruleset>

@@ -1,0 +1,43 @@
+name: Feature request
+description: Suggest an improvement or new capability.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement.
+
+        Full documentation:
+        https://php-n8n.com
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed API or design
+      description: Describe the API or behavior you would like to see.
+    validations:
+      required: true
+  - type: dropdown
+    id: package-fit
+    attributes:
+      label: Package fit
+      description: Where do you think this belongs?
+      options:
+        - Core client
+        - Separate ecosystem package
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and tradeoffs
+      description: List alternatives, risks, or compatibility concerns.

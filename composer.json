@@ -1,0 +1,63 @@
+{
+    "name": "php-n8n/client",
+    "description": "A lightweight, strongly typed PHP client for triggering n8n webhooks and tracking workflow executions.",
+    "keywords": [
+        "api-client",
+        "automation",
+        "composer",
+        "n8n",
+        "n8n-client",
+        "php",
+        "php-client",
+        "psr",
+        "psr-17",
+        "psr-18",
+        "webhook",
+        "webhooks",
+        "workflow",
+        "workflow-automation"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://php-n8n.com",
+    "support": {
+        "docs": "https://php-n8n.com",
+        "issues": "https://github.com/php-n8n/client/issues",
+        "source": "https://github.com/php-n8n/client"
+    },
+    "require": {
+        "php": ">=8.2",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0 || ^2.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5 || ^12.0",
+        "squizlabs/php_codesniffer": "^3.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpN8n\\Client\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpN8n\\Client\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "analyse": "phpstan analyse",
+        "check": [
+            "composer validate --strict",
+            "@test",
+            "@cs",
+            "@analyse"
+        ],
+        "cs": "phpcs",
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

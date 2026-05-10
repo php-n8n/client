@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible problem in php-n8n/client.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug.
+
+        Full documentation:
+        https://php-n8n.com
+  - type: input
+    id: package-version
+    attributes:
+      label: Package version
+      description: Which version of php-n8n/client are you using?
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: input
+    id: php-version
+    attributes:
+      label: PHP version
+      placeholder: "8.4.0"
+    validations:
+      required: true
+  - type: textarea
+    id: psr-implementations
+    attributes:
+      label: PSR implementations
+      description: List your PSR-7, PSR-17, and PSR-18 implementations.
+      placeholder: "PSR-18: guzzlehttp/guzzle, PSR-7/17: nyholm/psr7"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest reproducible example you can.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: extra-context
+    attributes:
+      label: Additional context
+      description: Add logs, stack traces, or related details if useful.

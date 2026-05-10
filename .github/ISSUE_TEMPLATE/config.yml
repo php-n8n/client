@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Full documentation
+    url: https://php-n8n.com
+    about: Read guides, API documentation, and integration notes.
+  - name: GitHub Discussions
+    url: https://github.com/php-n8n/client/discussions
+    about: Ask questions, share ideas, and discuss ecosystem direction.
