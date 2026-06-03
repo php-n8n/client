@@ -1,0 +1,42 @@
+name: Post-CI Build
+
+on:
+  repository_dispatch:
+    types:
+      - client-ci-passed
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Composer archive
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dispatched commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.client_payload.sha }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+          tools: composer:v2
+
+      - name: Validate package metadata
+        run: composer validate --strict
+
+      - name: Build Composer archive
+        run: |
+          mkdir -p dist
+          composer archive --format=zip --file="dist/php-n8n-client-${{ github.event.client_payload.sha }}"
+
+      - name: Upload package archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: php-n8n-client-${{ github.event.client_payload.sha }}
+          path: dist/*.zip
+          if-no-files-found: error

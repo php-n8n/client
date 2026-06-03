@@ -171,7 +171,7 @@ composer check
 
 This package follows Semantic Versioning.
 
-The first public tag is expected to be `v1.0.0`, marking the client API as stable from the initial release.
+The first public tag, `v1.0.0`, marks the client API as stable from the initial release.
 
 Breaking changes will only be introduced in future major releases.
 
