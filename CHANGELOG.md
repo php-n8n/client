@@ -7,6 +7,10 @@ https://php-n8n.com
 
 This project follows [Semantic Versioning](https://semver.org/).
 
+## v1.0.2 - 2026-06-03
+
+- Added a security policy with supported versions and private vulnerability reporting instructions.
+
 ## v1.0.1 - 2026-06-03
 
 - Added post-CI repository dispatch automation using `saedyousef/repository-dispatch`.
@@ -22,6 +26,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Added PSR-7, PSR-17, and PSR-18 based transport abstractions.
 
 ## Release Notes
+
+`v1.0.2` adds the security policy and vulnerability reporting process. It does not change the runtime API.
 
 `v1.0.1` is a maintenance release focused on CI/CD orchestration. It does not change the runtime API.
 
