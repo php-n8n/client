@@ -7,7 +7,7 @@ https://php-n8n.com
 
 This project follows [Semantic Versioning](https://semver.org/).
 
-## v1.0.1 - Unreleased
+## v1.0.1 - 2026-06-03
 
 - Added post-CI repository dispatch automation using `saedyousef/repository-dispatch`.
 - Added a repository-dispatch receiver workflow that builds and uploads a Composer package archive after CI passes.
@@ -22,5 +22,7 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Added PSR-7, PSR-17, and PSR-18 based transport abstractions.
 
 ## Release Notes
+
+`v1.0.1` is a maintenance release focused on CI/CD orchestration. It does not change the runtime API.
 
 `v1.0.0` establishes the initial stable public API. Future breaking changes will be reserved for major releases.

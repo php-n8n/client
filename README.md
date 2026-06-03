@@ -173,6 +173,8 @@ This package follows Semantic Versioning.
 
 The first public tag, `v1.0.0`, marks the client API as stable from the initial release.
 
+Release history is documented in [CHANGELOG.md](CHANGELOG.md).
+
 Breaking changes will only be introduced in future major releases.
 
 ## License
