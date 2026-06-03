@@ -7,7 +7,12 @@ https://php-n8n.com
 
 This project follows [Semantic Versioning](https://semver.org/).
 
-## v1.0.0 - Unreleased
+## v1.0.1 - Unreleased
+
+- Added post-CI repository dispatch automation using `saedyousef/repository-dispatch`.
+- Added a repository-dispatch receiver workflow that builds and uploads a Composer package archive after CI passes.
+
+## v1.0.0 - 2026-05-10
 
 - Added webhook triggering through `$client->webhooks()->trigger()`.
 - Added execution fetching and polling through the n8n API.
@@ -18,6 +23,4 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ## Release Notes
 
-The first tagged release is expected to be `v1.0.0`.
-
-This release establishes the initial stable public API. Future breaking changes will be reserved for major releases.
+`v1.0.0` establishes the initial stable public API. Future breaking changes will be reserved for major releases.

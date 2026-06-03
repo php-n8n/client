@@ -38,6 +38,12 @@ composer check
 
 This runs Composer validation, PHPUnit, PSR-12 checks, and PHPStan.
 
+## CI/CD
+
+CI runs on pushes and pull requests. After the full CI and coverage jobs pass on `main`, the workflow dispatches the `client-ci-passed` repository event using `saedyousef/repository-dispatch`.
+
+The dispatch job requires a `REPOSITORY_DISPATCH_TOKEN` secret with repository access. The receiver workflow listens for `client-ci-passed`, checks out the tested commit, validates Composer metadata, builds a Composer archive, and uploads it as a workflow artifact.
+
 ## Pull Requests
 
 When contributing code:
