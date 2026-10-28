@@ -9,6 +9,7 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 
+- Added package `authors` metadata to `composer.json`.
 - Allowed `squizlabs/php_codesniffer` ^4.0 as a development dependency.
 
 ## v1.0.3 - 2026-10-28
