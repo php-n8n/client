@@ -7,6 +7,10 @@ https://php-n8n.com
 
 This project follows [Semantic Versioning](https://semver.org/).
 
+## Unreleased
+
+- Allowed `squizlabs/php_codesniffer` ^4.0 as a development dependency.
+
 ## v1.0.3 - 2026-10-28
 
 - Pinned all GitHub Actions to full commit SHAs.
