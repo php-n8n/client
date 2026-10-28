@@ -7,6 +7,16 @@ https://php-n8n.com
 
 This project follows [Semantic Versioning](https://semver.org/).
 
+## v1.0.3 - 2026-10-28
+
+- Pinned all GitHub Actions to full commit SHAs.
+- Upgraded `actions/checkout`, `actions/upload-artifact`, and `codecov/codecov-action` to v7.
+- Fixed a template injection in the post-CI build workflow by passing the dispatch payload through `env` and validating the commit SHA.
+- Restricted the default `GITHUB_TOKEN` permissions in CI to read-only and disabled checkout credential persistence.
+- Added `composer audit` to CI.
+- Added Dependabot for GitHub Actions and Composer dependency updates.
+- Excluded development files (tests, CI config, tooling config) from Composer dist archives.
+
 ## v1.0.2 - 2026-06-03
 
 - Added a security policy with supported versions and private vulnerability reporting instructions.
@@ -26,6 +36,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Added PSR-7, PSR-17, and PSR-18 based transport abstractions.
 
 ## Release Notes
+
+`v1.0.3` hardens the CI/CD workflows and adds automated dependency updates. It does not change the runtime API.
 
 `v1.0.2` adds the security policy and vulnerability reporting process. It does not change the runtime API.
 

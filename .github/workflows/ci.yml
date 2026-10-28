@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   check:
     name: PHP ${{ matrix.php }}
@@ -20,10 +23,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
         with:
           php-version: ${{ matrix.php }}
           coverage: none
@@ -35,16 +40,21 @@ jobs:
       - name: Run checks
         run: composer check
 
+      - name: Audit dependencies
+        run: composer audit --no-interaction
+
   coverage:
     name: Coverage
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
         with:
           php-version: '8.5'
           coverage: xdebug
@@ -62,7 +72,7 @@ jobs:
           test -s coverage/clover.xml
 
       - name: Upload coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
         with:
           files: coverage/clover.xml
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -79,7 +89,7 @@ jobs:
 
     steps:
       - name: Dispatch post-CI build workflow
-        uses: saedyousef/repository-dispatch@v0.2
+        uses: saedyousef/repository-dispatch@f1fe69b136238dffd6a66eb3e6989f778650eaf8 # v0.2
         with:
           token: ${{ secrets.REPOSITORY_DISPATCH_TOKEN }}
           owner: ${{ github.repository_owner }}

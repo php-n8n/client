@@ -6,7 +6,8 @@ Security updates are provided for the latest stable release of the library.
 
 | Version | Supported |
 | ------- | --------- |
-| v1.0.2  | ✅        |
+| v1.0.3  | ✅        |
+| v1.0.2  | ❌        |
 | v1.0.1  | ❌        |
 | v1.0.0  | ❌        |
 
