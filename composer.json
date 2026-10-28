@@ -19,6 +19,14 @@
     ],
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Saed Yousef",
+            "email": "me@saedyousef.com",
+            "homepage": "https://github.com/saedyousef",
+            "role": "Maintainer"
+        }
+    ],
     "homepage": "https://php-n8n.com",
     "support": {
         "docs": "https://php-n8n.com",
