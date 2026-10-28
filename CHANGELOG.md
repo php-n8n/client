@@ -7,7 +7,7 @@ https://php-n8n.com
 
 This project follows [Semantic Versioning](https://semver.org/).
 
-## Unreleased
+## v1.0.4 - 2026-10-28
 
 - Added package `authors` metadata to `composer.json`.
 - Allowed `squizlabs/php_codesniffer` ^4.0 as a development dependency.
@@ -41,6 +41,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Added PSR-7, PSR-17, and PSR-18 based transport abstractions.
 
 ## Release Notes
+
+`v1.0.4` adds package author metadata and allows PHP_CodeSniffer 4 for development. It does not change the runtime API.
 
 `v1.0.3` hardens the CI/CD workflows and adds automated dependency updates. It does not change the runtime API.
 
